@@ -1,7 +1,7 @@
 # LLMs for Time Series Forecasting
 
-**Published:** 2025-03-11
-**Medium:** [https://medium.com/@kyle-t-jones/llms-for-time-series-forecasting-59ae5f5ceecc](https://medium.com/@kyle-t-jones/llms-for-time-series-forecasting-59ae5f5ceecc)
+Published: 2025-03-11
+Medium: [https://medium.com/@kyle-t-jones/llms-for-time-series-forecasting-59ae5f5ceecc](https://medium.com/@kyle-t-jones/llms-for-time-series-forecasting-59ae5f5ceecc)
 
 ## About
 

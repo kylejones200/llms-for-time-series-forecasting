@@ -36,10 +36,10 @@ Chronos from AWS and Time-LLM are examples of adapting LLMs for time series anal
 
 - Chronos (AWS): Developed to optimize LLM architectures for time series, Chronos introduces discrete tokenization strategies that convert real-valued time series into categorical representations. This allows existing transformer-based LLMs to process time series without modifying their core architecture. AWS has positioned Chronos as an enterprise-ready solution for forecasting, anomaly detection, and time series regression.
 
-[**Forecasting ERCOT Load with Amazon Chronos in Python**\ *Amazon Chronos is a time series LLM. We will use it to predict energy demand in the ERCOT (Electric Reliability Council...*medium.com](https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75 "https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75")[](https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75)
+[Forecasting ERCOT Load with Amazon Chronos in Python *Amazon Chronos is a time series LLM. We will use it to predict energy demand in the ERCOT (Electric Reliability Council...*medium.com](https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75 "https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75")[](https://medium.com/@kylejones_47003/forecasting-ercot-load-with-amazon-chronos-in-python-cf8be7a81a75)
 - Time-LLM: A research-driven approach that "reprograms" time series into textual prototypes. Time-LLM allows LLMs like LLaMA-7B to process time series by restructuring the data into a text-like format that retains critical numerical relationships. This method enables LLMs to generate domain-specific prompts, combining natural language reasoning with numerical sequence modeling.
 
-[**TimesFM for Time Series Forecasting in Python using Oil Production Data**\ *TimesFM removes the need for constant model retraining. It generalizes across industries. It scales to massive...*medium.com](https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff "https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff")[](https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff) Beyond these, a range of multimodal LLMs, including BloombergGPT (for financial data), GPT4TS (for general time series processing), and specialized encoders like Auto-TTE (for ECG analysis).
+[TimesFM for Time Series Forecasting in Python using Oil Production Data *TimesFM removes the need for constant model retraining. It generalizes across industries. It scales to massive...*medium.com](https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff "https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff")[](https://medium.com/@kylejones_47003/timesfm-for-time-series-forecasting-in-python-using-oil-production-data-b0a59b89d3ff) Beyond these, a range of multimodal LLMs, including BloombergGPT (for financial data), GPT4TS (for general time series processing), and specialized encoders like Auto-TTE (for ECG analysis).
 
 ### Bridging the Modality Gap
 LLMs have achieved remarkable success in text-based tasks, from language translation to code generation. However, applying them to time series presents a fundamental challenge: the modality gap between natural language and numerical sequences. LLMs are designed to process discrete tokens with structured grammatical rules, while time series data consists of continuous numerical values with complex temporal dependencies. To make LLMs effective for time series, researchers have developed several techniques to bridge this gap.
@@ -113,13 +113,13 @@ This approach allows LLMs to interpret numerical patterns as structured text tok
 
 Chronos, AWS's LLM-driven time series model, applies VQ-VAE to transform real-valued data into categorical embeddings, making time series forecasting more efficient.
 
-**Raw Data:**
+Raw Data:
 
-> ***\[123.4, 125.6, 127.8, 126.1, 124.5\]***
+> *\[123.4, 125.6, 127.8, 126.1, 124.5\]*
 
-**VQ-VAE Encoded Representation:**
+VQ-VAE Encoded Representation:
 
-> ***\["A1", "A3", "B1", "A4", "A2"\]***
+> *\["A1", "A3", "B1", "A4", "A2"\]*
 
 This reduces the number of unique tokens the LLM needs to process while preserving structure.
 
@@ -129,15 +129,15 @@ Chronos, AWS's time series model, applies this technique. It groups sensor readi
 
 This approach improves LLM efficiency. It allows models to work with long sequences. It prevents unnecessary tokenization of decimal values.
 
-Another way to convert time series data into discrete tokens is through **K-Means clustering**, which groups similar values into predefined clusters. Each data point is assigned a cluster ID, reducing numerical variation while preserving overall trends.
+Another way to convert time series data into discrete tokens is through K-Means clustering, which groups similar values into predefined clusters. Each data point is assigned a cluster ID, reducing numerical variation while preserving overall trends.
 
-**Raw Time Series:**
+Raw Time Series:
 
-> ***\[0.12, 0.15, 0.87, 0.91, 1.03\]***
+> *\[0.12, 0.15, 0.87, 0.91, 1.03\]*
 
-**Clustered Representation (5 Clusters):**
+Clustered Representation (5 Clusters):
 
-> ***\["C1", "C1", "C4", "C4", "C5"\]***
+> *\["C1", "C1", "C4", "C4", "C5"\]*
 
 This technique is particularly useful for reducing noise in high-frequency time series such as IoT sensor data. However, it assumes that clusters remain stable over time, which may not always be true.
 
@@ -157,13 +157,13 @@ Hybrid systems improve flexibility. They maintain numerical integrity while opti
 
 Binning is one of the simplest quantization methods, where continuous values are mapped to predefined categories based on fixed or adaptive intervals.
 
-**Raw Time Series:**
+Raw Time Series:
 
-> ***\[0.12, 0.34, 0.68, 0.92\]***
+> *\[0.12, 0.34, 0.68, 0.92\]*
 
-**Binned Representation:**
+Binned Representation:
 
-> ***\["A1", "A2", "A3", "A4"\]***
+> *\["A1", "A2", "A3", "A4"\]*
 
 Fixed bins work well when the range of values is known in advance, but they struggle with skewed distributions where certain ranges occur more frequently.
 
