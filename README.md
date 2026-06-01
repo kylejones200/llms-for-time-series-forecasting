@@ -11,14 +11,7 @@ Time series analysis is used for finance, healthcare, industrial IoT, and many o
 
 Before the rise of machine learning, time series analysis was largely a domain of statistical models. ARIMA (AutoRegressive Integrated Moving Average) provided a way to model linear dependencies, while seasonal decomposition techniques helped uncover underlying trends. Economists and engineers relied on these methods to forecast stock prices, optimize supply chains, and monitor equipment failures.
 
-## About
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
-
-## Files
-
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
 
 ## Disclaimer
 
